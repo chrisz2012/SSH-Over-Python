@@ -4,8 +4,8 @@ import sys
 firstArg=sys.argv[1]
 secondArg=sys.argv[2]
 
-# Update the next three lines with your
-# server's information
+# Update the username and password with your
+# credential information
 
 host = firstArg
 username = "YOUR_USER"
