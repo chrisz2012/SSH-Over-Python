@@ -22,7 +22,7 @@ client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
 for i in firstArg.split():
     print("sshing to {}".format(i))
     client.connect(i, username=username, password=password)
-    _stdin, _stdout, _stderr = client.exec_command("df")
+    _stdin, _stdout, _stderr = client.exec_command(secondArg)
     print(_stdout.read().decode())
     del _stdin
 
