@@ -10,7 +10,6 @@ secondArg=sys.argv[2]
 # Update the next three lines with your
 # server's information
 
-host = firstArg
 username = "YOUR_USERNAME"
 password = "YOUR_PASSWORD"
 command = secondArg
@@ -18,7 +17,6 @@ command = secondArg
 client = paramiko.client.SSHClient()
 client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
 
-# Added the ability to iterate over multiple hosts
 for i in firstArg.split():
     print("sshing to {}".format(i))
     client.connect(i, username=username, password=password)
